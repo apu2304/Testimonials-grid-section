@@ -1,0 +1,117 @@
+:root {
+    --alice-blue: #EDF2F8ff;
+    --blue-violet: #733FC7ff;
+    --paynes-gray: #49556Bff;
+    --rich-black: #18202Dff;
+    --davys-gray: #4E545Bff;
+    --tropical-indigo: #A775F2ff;
+    --cadet-gray: #979A9Fff;
+    --white: #FFFFFFff;
+}
+@font-face {
+    font-family: 'bar';
+    src: url('fonts/BarlowSemiCondensed-Medium.ttf');
+}
+@font-face {
+    font-family: 'thin' ;
+    src: url('fonts/BarlowSemiCondensed-Light.ttf');
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--alice-blue);
+    font-family: 'bar'; 
+}
+.grid-wrapper{
+    max-width: 75em;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:  
+    "grid1 grid1 grid2 grid5"
+    "grid3 grid4 grid4 grid5"
+    ;
+    gap: 20px;
+   
+}
+.grid{
+    padding: 30px;
+    position: relative;
+    border-radius: 20px;
+}
+.img{
+    display: flex;
+    align-items: center;
+}
+.grid h1{
+    font-size: 1.5em;
+}
+.grid p{
+    font-family: 'thin';
+}
+.wrap{
+     display: flex; 
+     flex-direction:column;
+     gap: 3px;
+}
+.img span{
+    display: flex; 
+    flex-direction: column;
+    margin-left: 8px;
+    font-family: 'thin';
+}
+ .grad{
+    font-weight: 600;
+}
+.img .ver{
+    display: block;
+}
+.grid img{
+    border-radius: 50%;
+}
+.grid1{
+    grid-area: grid1;
+    background-color: var(--blue-violet);
+    color: var(--white);
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top calc(10px) right calc(80px);
+}
+.grid2{
+    grid-area: grid2;
+    background-color: var(--paynes-gray);
+    color: var(--white);
+}
+.grid3{
+    grid-area: grid3;
+    background-color: var(--white);
+    color: var(--rich-black);
+}
+.grid4{
+  grid-area: grid4;
+  background-color: var(--rich-black);
+  color: var(--white);
+}
+.grid5{
+    grid-area: grid5;
+    background-color: var(--white);
+    color: var(--rich-black);
+}
+@media screen and (max-width: 35em){
+    .grid-wrapper{
+       display: flex;
+       flex-direction: column;
+       margin: 20px;
+    }
+    .grid1{
+        background-position: top calc(10px) right calc(40px);
+    }
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
